@@ -1,100 +1,178 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apple Style Page</title>
+    <title>温州大学大模型工作室</title>
     <style>
-        /* 全局样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            color: #333;
-            background-color: #f5f5f7;
-            line-height: 1.6;
+            font-family: 'Microsoft YaHei', sans-serif;
+            background: #0a192f;
+            color: #fff;
         }
 
-        header {
-            background-color: #ffffff;
-            border-bottom: 1px solid #e0e0e0;
-            padding: 1rem;
+        /* 导航栏样式 */
+        .navbar {
+            position: fixed;
+            width: 100%;
+            padding: 1.5rem 3rem;
+            background: rgba(10, 25, 47, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+
+        /* Hero区域样式 */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(to bottom, #0a192f, #112240);
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 1.8rem;
-            font-weight: 600;
-            color: #1d1d1f;
+        .hero-content {
+            z-index: 1;
         }
 
-        main {
-            padding: 2rem;
-            max-width: 800px;
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #00dbde, #fc00ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            color: #8892b0;
+            max-width: 600px;
             margin: 0 auto;
         }
 
-        h2 {
-            font-size: 1.5rem;
-            font-weight: 500;
-            margin: 1rem 0;
-            color: #1d1d1f;
+        /* 内容区域样式 */
+        .section {
+            padding: 5rem 2rem;
         }
 
-        p {
-            margin: 1rem 0;
-            color: #515154;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 0.8rem 1.5rem;
-            font-size: 1rem;
-            font-weight: 500;
-            color: #ffffff;
-            background-color: #0071e3;
-            border: none;
-            border-radius: 0.4rem;
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
             text-align: center;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-            cursor: pointer;
+            color: #64ffda;
         }
 
-        .button:hover {
-            background-color: #005bb5;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
-            font-size: 0.9rem;
-            color: #6e6e73;
-        }
-
-        footer a {
-            color: #0071e3;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
+        /* 粒子背景效果 */
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Apple Style</h1>
-    </header>
-    <main>
-        <h2>Experience Elegance</h2>
-        <p>This is a clean and simple webpage inspired by Apple's iconic design principles. The focus is on clarity, simplicity, and elegance.</p>
-        <a href="#" class="button">Learn More</a>
-    </main>
-    <footer>
-        <p>&copy; 2024 Your Company. Inspired by Apple. <a href="#">Privacy Policy</a></p>
-    </footer>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="logo">温大大模型工作室</div>
+    </nav>
+
+    <!-- Hero区域 -->
+    <section class="hero">
+        <div id="particles-js"></div>
+        <div class="hero-content">
+            <h1>温州大学大模型工作室</h1>
+            <p>探索人工智能的未来，引领科技创新的潮流</p>
+        </div>
+    </section>
+
+    <!-- 研究方向 -->
+    <section class="section">
+        <h2 class="section-title">研究方向</h2>
+        <!-- 在这里添加研究方向的具体内容 -->
+    </section>
+
+    <!-- 团队成员 -->
+    <section class="section">
+        <h2 class="section-title">团队成员</h2>
+        <!-- 在这里添加团队成员的具体内容 -->
+    </section>
+
+    <!-- 成果展示 -->
+    <section class="section">
+        <h2 class="section-title">成果展示</h2>
+        <!-- 在这里添加成果展示的具体内容 -->
+    </section>
+
+    <script>
+        // 配置粒子效果
+        particlesJS('particles-js',
+        {
+            "particles": {
+                "number": {
+                    "value": 40,
+                    "density": {
+                        "enable": true,
+                        "value_area": 1000
+                    }
+                },
+                "color": {
+                    "value": "#64ffda"
+                },
+                "shape": {
+                    "type": "circle",
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 2,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#64ffda",
+                    "opacity": 0.2,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 1.5,
+                    "direction": "none",
+                    "random": true,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab"
+                    },
+                    "onclick": {
+                        "enable": false
+                    },
+                    "resize": true
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
 </body>
 </html>
